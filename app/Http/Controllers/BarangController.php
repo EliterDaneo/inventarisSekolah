@@ -172,6 +172,13 @@ class BarangController extends Controller
      */
     public function destroy(barangs $barangs)
     {
-        //
+        //delete image
+        Storage::delete('public/data/fotoBarangDolphin/'. $barangs->image);
+
+        //delete post
+        $barangs->delete();
+
+        //redirect to index
+        return redirect()->intended('dataBArang')->with(['success' => 'Data Berhasil Dihapus!']);
     }
 }

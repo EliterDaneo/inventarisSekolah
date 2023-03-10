@@ -42,7 +42,7 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('show/{id}', 'show')->name('show');
             Route::get('edit/{id}', 'edit')->name('edit');
             Route::put('update/{id}', 'update')->name('update');
-            Route::get('destroy/{id}', 'destroy')->name('destroy');
+            Route::delete('destroy/{id}', 'destroy')->name('destroy');
         });
         Route::controller(UserController::class)->group(function () {
             Route::get('user', 'index')->name('user');

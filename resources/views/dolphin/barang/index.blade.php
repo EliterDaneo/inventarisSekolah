@@ -78,11 +78,11 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>Are you sure you want to logout {{ $user->name }}?</p>
+                <p>Are you sure you want to delete this data?</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
-                <a href="{{ url('logout') }}" class="btn btn-primary">Logout</a>
+                <a href="{{ url('destroy', $barangs->id) }}" class="btn btn-primary">Logout</a>
             </div>
         </div>
     </div>
